@@ -14,13 +14,16 @@
  *
  * The result should be 9
  */
-function getMatrixElementsSum(mas) {
-  let sum = 0;
+function getMatrixElementsSum(matrix) {
+  let s = 0;
+  const mas = matrix;
   for (let i = 0; i < mas.length; i++) {
     for (let j = 0; j < mas[i].length; j++) {
-      sum += mas[i][j];
+      if (i === 0 || mas[i - 1][j] !== 0) {
+        s += mas[i][j];
+      }
     }
   }
-  return sum;
+  return s;
 }
 module.exports = getMatrixElementsSum;
