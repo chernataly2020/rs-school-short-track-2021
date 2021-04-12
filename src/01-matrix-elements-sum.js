@@ -17,8 +17,8 @@
 function getMatrixElementsSum(mas) {
   let sum = 0;
   for (let i = 0; i < mas.length; i++) {
-    if (mas[i] > 0) {
-      sum += mas[i];
+    for (let j = 0; j < mas[i].length; j++) {
+      sum += mas[i][j];
     }
   }
   return sum;
