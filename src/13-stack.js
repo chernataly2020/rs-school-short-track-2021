@@ -10,17 +10,25 @@
  * stack.pop(); // undefined
  *
  */
+
 class Stack {
-  push(/* element */) {
-    throw new Error('Not implemented');
+  constructor() {
+    this.data = [];
+    this.top = 0;
+  }
+
+  push(element) {
+    this.data[this.top] = element;
+    this.top += 1;
   }
 
   pop() {
-    throw new Error('Not implemented');
+    this.top -= 1;
+    return this.data.pop(); // removes the last element
   }
 
   peek() {
-    throw new Error('Not implemented');
+    return this.data[this.top - 1];
   }
 }
 
