@@ -1,5 +1,3 @@
-/* eslint-disable no-mixed-operators */
-/* eslint-disable no-undef */
 /**
  * Given a number, replace this number with
  * the sum of its digits until we get to a one digit number.
@@ -13,7 +11,10 @@
  *
  */
 function getSumOfDigits(n) {
-  return ((n - 1) % 9 + 1);
+  let num = n - 1;
+  num = +(num % 9);
+  num++;
+  return num;
 }
 
 module.exports = getSumOfDigits;
