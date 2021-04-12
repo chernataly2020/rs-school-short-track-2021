@@ -17,8 +17,25 @@
  * }
  */
 
-function removeKFromList(/* l, k */) {
-  throw new Error('Not implemented');
+function removeKFromList(l, k) {
+  if (l == null) {
+    return l;
+  }
+  while (l.value === k) {
+    // eslint-disable-next-line no-param-reassign
+    l = l.next;
+  }
+  let thisNode = l;
+  let nextNode = thisNode.next;
+  while (nextNode != null) {
+    if (nextNode.value === k) {
+      thisNode.next = nextNode.next;
+      // No more nodes, and last node was to be removed
+      if (thisNode.next == null) break;
+    }
+    thisNode = thisNode.next;
+    nextNode = thisNode.next;
+  }
+  return l;
 }
-
 module.exports = removeKFromList;
