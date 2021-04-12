@@ -17,10 +17,8 @@
 function getMatrixElementsSum(mas) {
   let sum = 0;
   for (let i = 0; i < mas.length; i++) {
-    if (Object.prototype.toString.call(mas[i]) === '[object Number]') {
-      if (mas[i] > 0) {
-        sum += mas[i];
-      }
+    if (mas[i] > 0) {
+      sum += mas[i];
     }
   }
   return sum;
