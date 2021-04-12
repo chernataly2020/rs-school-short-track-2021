@@ -13,7 +13,7 @@ function encodeLine(str) {
   let result = '';
   for (let i = 0; i < str.length; i++) {
     if (str[i] === str[i + 1]) {
-      x += 1;
+      x++;
     } else {
       result += x + str[i];
       x = 1;
