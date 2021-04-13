@@ -16,7 +16,7 @@
  *   this.next = null;
  * }
  */
-
+//Линейный список
 function removeKFromList(l, k) {
   if (l == null) {
     return l;
